@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Programming Test</title>
+  </head>
+  <body>
+        <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+    </nav><br>
+    <h1 class="text-center">Contact us Form</h1>
+
+    <p id = "ds" class="text-success"></p>
+      
+      <div class="contact-box">
+        
+            
+            <form   id="contactForm" method="post" " >
+              {% csrf_token %}
+              <div>
+              
+              <input id='name' type="text" class="form-control" placeholder="Name"  >
+              <span id="nameerror" class="text-danger font-weight-bold"></span>
+              </div>
+              <div>
+              <input id='email' type="text" class="form-control" placeholder="Email" >
+              <span id="emailerror" class="text-danger font-weight-bold"></span>
+              </div>
+              <div>
+              <input id='number' type="text" class="input-field" placeholder="Phone Number" >
+              <span id="numbererror" class="text-danger font-weight-bold"></span>
+              </div>
+              <div>
+              <textarea id='subject' class="textarea-field" placeholder="Your message"></textarea >
+                <span id="subjecterror" class="text-danger font-weight-bold"></span>
+              </div>
+              <button  id="subbt" class="btn btn-primary">Submit</button>
+              <span id="success" class="text-danger font-weight-bold"></span>
+            
+            
+            
+            </form>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
