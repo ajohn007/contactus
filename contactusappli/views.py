@@ -13,18 +13,12 @@ from contactusappli.models import Contact
 from contactusappli.serializers import ContactusSerializer
 from rest_framework.decorators import api_view
 
-
 # Create your views here.
-def index(request):
-    return render(request, 'contactusappli/index.html')
-
-
 
 def contact(request):
     all_contact=Contact.objects.all()
     template='contactusappli/index.html'
     return render(request,template,{'contactsall':all_contact})
-
 
 def create_user(request):
     
