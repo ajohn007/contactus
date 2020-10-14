@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
-
+from . models import Contact
 from django.http import HttpResponse
+from django.shortcuts import redirect
+
+from .forms import ContactModelForm
 
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
@@ -12,14 +15,14 @@ from rest_framework.decorators import api_view
 
 
 # Create your views here.
-
 def index(request):
     return render(request, 'contactusappli/index.html')
 
 
+
 def contact(request):
     all_contact=Contact.objects.all()
-    template='contactusappli\index.html'
+    template='contactusappli/index.html'
     return render(request,template,{'contactsall':all_contact})
 
 

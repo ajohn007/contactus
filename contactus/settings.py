@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,10 +82,10 @@ WSGI_APPLICATION = 'contactus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'contactusdb',
+        'NAME': 'countriesdb',
         'USER': 'postgres',
         'PASSWORD': 'nellikkattil',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
@@ -121,8 +123,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
